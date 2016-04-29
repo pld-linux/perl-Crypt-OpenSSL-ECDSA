@@ -17,11 +17,12 @@ Source0:	http://www.cpan.org/modules/by-module/Crypt/%{pdir}-%{pnam}-%{version}.
 # Source0-md5:	2ee0afce54f5a2bfc47b336a7400eca2
 URL:		http://search.cpan.org/dist/Crypt-OpenSSL-ECDSA/
 BuildRequires:	openssl-devel >= 0.9.8a
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Crypt-OpenSSL-EC >= 1.01
 %endif
+Requires:	perl-Crypt-OpenSSL-EC >= 1.01
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -59,5 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Crypt/OpenSSL/ECDSA.pm
 %dir %{perl_vendorarch}/auto/Crypt/OpenSSL/ECDSA
 %{perl_vendorarch}/auto/Crypt/OpenSSL/ECDSA/autosplit.ix
-%attr(755,root,root) %{perl_vendorarch}/auto/Crypt/OpenSSL/ECDSA/*.so
+%attr(755,root,root) %{perl_vendorarch}/auto/Crypt/OpenSSL/ECDSA/ECDSA.so
 %{_mandir}/man3/Crypt::OpenSSL::ECDSA.3pm*
