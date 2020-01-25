@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# Do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	OpenSSL-ECDSA
 Summary:	Crypt::OpenSSL::ECDSA - Perl extension for OpenSSL ECDSA (Elliptic Curve Digital Signature Algorithm)
