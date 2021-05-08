@@ -8,7 +8,7 @@ Summary:	Crypt::OpenSSL::ECDSA - Perl extension for OpenSSL ECDSA (Elliptic Curv
 Summary(pl.UTF-8):	Crypt::OpenSSL::ECDSA - implementacja algorytmu ECDSA w Perlu
 Name:		perl-Crypt-OpenSSL-ECDSA
 Version:	0.07
-Release:	8
+Release:	9
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
