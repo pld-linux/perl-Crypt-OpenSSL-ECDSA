@@ -7,18 +7,18 @@
 Summary:	Crypt::OpenSSL::ECDSA - Perl extension for OpenSSL ECDSA (Elliptic Curve Digital Signature Algorithm)
 Summary(pl.UTF-8):	Crypt::OpenSSL::ECDSA - implementacja algorytmu ECDSA w Perlu
 Name:		perl-Crypt-OpenSSL-ECDSA
-Version:	0.07
-Release:	9
+Version:	0.10
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Crypt/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	2ee0afce54f5a2bfc47b336a7400eca2
-Patch0:		Crypt-OpenSSL-ECDSA-0.08-Port-to-OpenSSL-1.1.0.patch
-URL:		http://search.cpan.org/dist/Crypt-OpenSSL-ECDSA/
+# Source0-md5:	182eb2eec5f490f416358d4271fe2237
+URL:		https://metacpan.org/release/Crypt-OpenSSL-ECDSA
 BuildRequires:	openssl-devel >= 0.9.8a
-BuildRequires:	perl-devel >= 1:5.8.1
+BuildRequires:	perl-devel >= 1:5.8.5
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-Crypt-OpenSSL-EC >= 1.01
 %endif
@@ -27,15 +27,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This module provides an interface to the ECDSA (Elliptic Curve Digital
-Signature Algorithm) functions in OpenSSL. Tested against OpenSSL 1.0.2
+Signature Algorithm) functions in OpenSSL.
 
 %description -l pl.UTF-8
 Ten moduł dostarcza interfejs do funkcji implementujących algorytm
-ECDSA z biblioteki OpenSSL. Testowane z OpenSSLem w wersji 1.0.2.
+ECDSA z biblioteki OpenSSL.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
