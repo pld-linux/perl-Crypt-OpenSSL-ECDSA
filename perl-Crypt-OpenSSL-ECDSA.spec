@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# Do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Crypt
 %define		pnam	OpenSSL-ECDSA
@@ -14,7 +14,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Crypt/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	182eb2eec5f490f416358d4271fe2237
-URL:		https://metacpan.org/release/Crypt-OpenSSL-ECDSA
+URL:		https://metacpan.org/dist/Crypt-OpenSSL-ECDSA
 BuildRequires:	openssl-devel >= 0.9.8a
 BuildRequires:	perl-devel >= 1:5.8.5
 BuildRequires:	rpm-perlprov >= 4.1-13
